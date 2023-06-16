@@ -9,7 +9,7 @@ Configuration in this directory creates
 - Disabled queue (no resources created)
 
 
-# Complete SQS Queue Example
+# Below are the docker command to run the app in container.
 
 In the above repository, we can produce and consume the message from sqs.
 
