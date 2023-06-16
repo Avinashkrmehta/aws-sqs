@@ -1,0 +1,43 @@
+version: '2'
+services: 
+    sqsconsumer:
+        build: 
+            context: ./sqsconsumer
+            dockerfile: ./Dockerfile
+        environment:
+            NODE_ENV: development
+
+           
+        volumes:
+            - ./sqsconsumer:/usr/src/app
+            - /usr/src/app/node_modules
+            - /etc/hosts:/etc/hosts
+        network_mode: host
+    sqsconsumer_one:
+        build: 
+            context: ./sqsconsumer
+            dockerfile: ./Dockerfile
+        environment:
+            NODE_ENV: development
+
+           
+        volumes:
+            - ./sqsconsumer:/usr/src/app
+            - /usr/src/app/node_modules
+            - /etc/hosts:/etc/hosts
+        network_mode: host
+    sqsproducer:
+        build: 
+            context: ./sqsproducer
+            dockerfile: ./Dockerfile
+        environment:
+            NODE_ENV: development
+
+
+networks:
+    host:
+        name: host
+        external: true   
+    
+volumes:
+    database-data: # named volumes can be managed easier using docker-compose

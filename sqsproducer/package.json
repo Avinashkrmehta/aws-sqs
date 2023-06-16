@@ -1,0 +1,23 @@
+{
+  "name": "datamart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.350.0",
+    "aws-sdk": "^2.1395.0",
+    "dotenv": "^16.0.3",
+    "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.43",
+    "node-abort-controller": "^3.1.1",
+    "pg": "^8.11.0",
+    "sqs-consumer": "^7.1.0",
+    "sqs-producer": "^3.1.2"
+  }
+}
